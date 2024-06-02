@@ -3,10 +3,10 @@ import React from "react";
 
 export default function Sidebar() {
   return (
-    <div className="space-y-6 w-52 bg-slate-800 text-slate-50 h-screen" >
-      <Link className="mt-6" href="#">Logo</Link>
+    <div className="space-y-6 w-64 bg-slate-700 text-slate-50 min-h-screen p-3 " >
+      <Link className="mb-6" href="#">Logo</Link>
       <div className="flex flex-col space-y-3" >
-        <Link className="" href="#">Catalogue</Link>
+        <Link href="#">Catalogue</Link>
         <Link href="#">Customers</Link>
         <Link href="#">Markets</Link>
         <Link href="#">Farmers</Link>
