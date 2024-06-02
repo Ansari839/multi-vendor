@@ -1,9 +1,16 @@
+import Heading from "@/app/components/backend/Heading";
+import LargeCards from "@/app/components/backend/LargeCards";
 
 
 export default function Dashboard() {
   return (
-    <div className="flex items-center justify-center flex-col min-h-screen">
-      <h1 className="text-4xl">Dashboard</h1>
+    <div>
+      <Heading title="Dashboard Overview" />
+      {/* Lagre Card */}
+      <LargeCards />
+      {/* Small Card */}
+      {/* Charts */}
+      {/* Recent Order Table */}
     </div>
   );
 }
