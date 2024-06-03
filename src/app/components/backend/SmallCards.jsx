@@ -1,28 +1,33 @@
 import React from "react";
+import { ShoppingCart, CheckCheck, RefreshCcw } from "lucide-react";
 import SmallCard from "./SmallCard";
 
 export default function SmallCards() {
   const orderStatus = [
     {
       title: "Total Order",
-      sales: 110000,
+      number: 100,
       color: "bg-green-600",
+      icon: ShoppingCart,
     },
 
     {
       title: "Pending Orders",
-      sales: 130000,
+      number: 120,
       color: "bg-blue-600",
+      icon: ShoppingCart,
     },
     {
       title: "Order In Process",
-      sales: 1100000,
+      number: 300,
       color: "bg-orange-600",
+      icon: RefreshCcw,
     },
     {
       title: "Order Deliverd",
-      sales: 1100000,
-      color: "bg-orange-600",
+      number: 11000,
+      color: "bg-purple-600",
+      icon: CheckCheck,
     },
   ];
   return (
