@@ -1,5 +1,5 @@
 import React from "react";
-import { ShoppingCart, CheckCheck, RefreshCcw } from "lucide-react";
+import { ShoppingCart, CheckCheck, RefreshCcw, Loader2 } from "lucide-react";
 import SmallCard from "./SmallCard";
 
 export default function SmallCards() {
@@ -15,7 +15,7 @@ export default function SmallCards() {
       title: "Pending Orders",
       number: 120,
       color: "bg-blue-600",
-      icon: ShoppingCart,
+      icon: Loader2,
     },
     {
       title: "Order In Process",
