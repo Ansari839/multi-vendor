@@ -25,11 +25,11 @@ export default function LargeCards() {
       sales: 1100000,
       color: "bg-purple-600",
     },
-    {
-      period: "All Time",
-      sales: 1100000,
-      color: "bg-purple-600",
-    },
+    // {
+    //   period: "All Time",
+    //   sales: 1100000,
+    //   color: "bg-purple-600",
+    // },
   ];
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 py-8">
