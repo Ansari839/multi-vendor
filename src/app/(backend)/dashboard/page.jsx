@@ -1,3 +1,4 @@
+import CustomeDataTable from "@/app/components/backend/CustomeDataTable";
 import DashboardCharts from "@/app/components/backend/DashboardCharts";
 import Heading from "@/app/components/backend/Heading";
 import LargeCards from "@/app/components/backend/LargeCards";
@@ -15,6 +16,7 @@ export default function Dashboard() {
       {/* Charts */}
       <DashboardCharts />
       {/* Recent Order Table */}
+      <CustomeDataTable />
     </div>
   );
 }
