@@ -5,12 +5,12 @@ import data from "../../data.json";
 export default function CustomeDataTable() {
   const arr = [1, 2, 3, 4, 5];
   const PAGE_SIZE = 10;
-  const [currentPage, setCurrentPage] = useState(1);
+  // const [currentPage, setCurrentPage] = useState(4);
   const startIndex = (currentPage - 1) * PAGE_SIZE;
   const endIndex = currentPage + PAGE_SIZE;
   const currentlyDispalyPage = data.slice(startIndex, endIndex);
 
-  function handlePageChange(oage) {
+  function handlePageChange(page) {
     console.log(page);
   }
 
@@ -120,12 +120,12 @@ export default function CustomeDataTable() {
             </span>
             <ul className="inline-flex -space-x-px rtl:space-x-reverse text-sm h-8">
               <li>
-                <a
-                  href="#"
-                  className="flex items-center justify-center px-3 h-8 ms-0 leading-tight text-gray-500 bg-white border border-gray-300 rounded-s-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+                <button
+                  onClick={() => setCurrentPage(currentPage - 1)}
+                  className="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 rounded-e-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
                 >
                   Previous
-                </a>
+                </button>
               </li>
               <li>
                 <a
