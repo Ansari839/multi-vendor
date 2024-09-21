@@ -5,7 +5,7 @@ import { Moon, Sun } from "lucide-react";
 
 export default function ThemeSwitcher() {
   const [mount, setMount] = useState(false);
-  const [theme, setTheme] = useState();
+  const { theme, setTheme } = useTheme();
   console.log(theme);
 
   useEffect(() => {
@@ -21,7 +21,7 @@ export default function ThemeSwitcher() {
       className="dark:text-green-600"
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
     >
-      {theme === "light" ? <Moon /> : <Sun />}
+      {theme === "light" ? <Moon className="text-green-600" /> : <Sun />}
     </button>
   );
 }
