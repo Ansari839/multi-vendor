@@ -133,7 +133,7 @@ export default function CustomeDataTable() {
                       disabled={currentPage == index + 1}
                       className={
                         currentPage == index + 1
-                          ? "flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-gray border border-white-300 hover:bg-white-100 hover:text-white-700 dark:bg-white-800 dark:border-white-700 dark:text-white-400 dark:hover:bg-white-700 dark:hover:text-gray"
+                          ? "flex items-center justify-center px-3 h-8 leading-tight text-white-500 bg-blue-600 border border-white-300 hover:bg-white-100 hover:text-white-700 dark:bg-white-800 dark:border-white-700 dark:text-white-400 dark:hover:bg-white-700 dark:hover:text-gray"
                           : "flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
                       }
                     >
