@@ -17,21 +17,21 @@ import {
   LayoutList,
   SendToBack,
   ScanSearch,
-  MonitorPlay
+  MonitorPlay,
 } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import {React , useState} from "react";
+import { React, useState } from "react";
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
 } from "@/components/ui/collapsible";
 
-export default function Sidebar({showSideBar , setShowSiderBar}) {
+export default function Sidebar({ showSideBar, setShowSiderBar }) {
   const pathName = usePathname();
 
-  const [openMenu , setOpenMenu] = useState(false)
+  const [openMenu, setOpenMenu] = useState(false);
   const sideBarMenu = [
     // { title: "Dashboard", href: "/", icon: LayoutGrid },
     { title: "Customers", href: "/dashboard/customers", icon: Users },
@@ -52,7 +52,10 @@ export default function Sidebar({showSideBar , setShowSiderBar}) {
 
   return (
     <div
-      className={showSideBar ?"space-y-6 w-64 bg-slate-400 dark:bg-slate-700 text-slate-700 dark:text-slate-200 min-h-screen px-6 py-4 shadow-md sticky top-0 left-0 hidden sm:block":"space-y-6 w-64 bg-slate-200 dark:bg-red-700 text-slate-700 dark:text-slate-200 min-h-screen px-6 py-4 shadow-md sticky top-0 left-0 sm:block"
+      className={
+        showSideBar
+          ? "space-y-6 w-64 bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-200 min-h-screen px-6 py-4 shadow-md sticky top-0 left-0 hidden sm:block"
+          : "space-y-6 w-64 bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-200 min-h-screen px-6 py-4 shadow-md sticky top-0 left-0 sm:block"
       }
     >
       <Link className="px-6 py-4 w-36 " href="/dashboard">
@@ -60,6 +63,7 @@ export default function Sidebar({showSideBar , setShowSiderBar}) {
       </Link>
       <div className="flex flex-col space-y-3">
         <Link
+          onClick={() => setShowSiderBar(true)}
           href="/dashboard"
           className={
             pathName === "/dashboard"
@@ -72,7 +76,7 @@ export default function Sidebar({showSideBar , setShowSiderBar}) {
         </Link>
 
         <Collapsible className="px-6 py-2">
-          <CollapsibleTrigger onClick={()=> setOpenMenu(!openMenu)}>
+          <CollapsibleTrigger onClick={() => setOpenMenu(!openMenu)}>
             <div className="flex items-center space-x-6 py-2">
               <div className="flex items-center space-x-3">
                 <Slack />
@@ -91,13 +95,14 @@ export default function Sidebar({showSideBar , setShowSiderBar}) {
                 <Link
                   key={i}
                   href={items.href}
+                  onClick={() => setShowSiderBar(true)}
                   className={
                     pathName === `${items.href}`
                       ? "flex items-center space-x-3 py-1 text-sm border-1-4 border-lime-600 text-lime-500"
                       : "flex items-center space-x-3 py-1"
                   }
                 >
-                  <Icon className="w-4 h-4"/>
+                  <Icon className="w-4 h-4" />
                   <span>{items.title}</span>
                 </Link>
               );
@@ -110,7 +115,7 @@ export default function Sidebar({showSideBar , setShowSiderBar}) {
           return (
             <Link
               key={i}
-              onClick={()=>setShowSiderBar(true)}
+              onClick={() => setShowSiderBar(true)}
               href={items.href}
               className={
                 pathName === `${items.href}`
