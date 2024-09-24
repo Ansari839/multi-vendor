@@ -21,7 +21,7 @@ export default function WeeklySalesCharts() {
     LineElement,
     Title,
     Tooltip,
-    Legend,
+    Legend
   );
 
   const options = {
@@ -45,27 +45,6 @@ export default function WeeklySalesCharts() {
     "June",
     "July",
   ];
-  // const data = {
-  //   labels,
-  //   datasets: [
-  //     {
-  //       label: "Dataset 1",
-  //       data: labels.map(() =>
-  //         faker.datatype.number({ min: -1000, max: 1000 }),
-  //       ),
-  //       borderColor: "rgb(255, 99, 132)",
-  //       backgroundColor: "rgba(255, 99, 132, 0.5)",
-  //     },
-  //     {
-  //       label: "Dataset 2",
-  //       data: labels.map(() =>
-  //         faker.datatype.number({ min: -1000, max: 1000 }),
-  //       ),
-  //       borderColor: "rgb(53, 162, 235)",
-  //       backgroundColor: "rgba(53, 162, 235, 0.5)",
-  //     },
-  //   ],
-  // };
 
   const tabs = [
     {
@@ -103,13 +82,15 @@ export default function WeeklySalesCharts() {
   const [chartTodisplay, setChartTodisplay] = useState(tabs[0].type);
 
   return (
-    <div className="bg-slate-700 rounded-lg p-8">
-      <h3 className="text-xl font-bold">Best Sellings Charts</h3>
+    <div className="bg-slate-200 dark:bg-slate-700 rounded-lg p-8">
+      <h3 className="text-xl font-bold text-slate-700 dark:text-slate-50">
+        Best Sellings Charts
+      </h3>
       <div className="p-8">
         {/* Tabs */}
 
-        <div className="border-b border-gray-200 dark:border-gray-700">
-          <ul className="flex flex-wrap -mb-px text-sm font-medium text-center text-gray-500 dark:text-gray-400">
+        <div className="border-b border-gray-200 dark:border-gray-700 text-slate-700 dark:text-slate-50">
+          <ul className="flex flex-wrap -mb-px text-sm font-medium text-center text-gray-700 dark:text-gray-400">
             {tabs.map((tabs, i) => {
               return (
                 <li className="me-2" key={i}>

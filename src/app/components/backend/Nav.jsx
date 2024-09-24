@@ -20,13 +20,13 @@ import {
 } from "@/components/ui/dropdown-menu";
 import ThemeSwitcher from "@/components/ui/ThemeSwitcher";
 
-export default function Nav() {
+export default function Nav({setShowSiderBar , showSideBar}) {
   return (
-    <div className="flex justify-between text-slate-50 bg-slate-900 h-16 px-6 py-4 sticky top-0">
-      <button>
-        <AlignJustify />
+    <div className="flex justify-between text-slate-700 dark:text-slate-50 bg-slate-200 dark:bg-slate-700 h-16 px-6 py-4 sticky top-0">
+      <button onClick={() => setShowSiderBar(!showSideBar)}>
+        <AlignJustify className="text-lime-700 dark:text-lime-500" />
       </button>
-      <div className="flex space-x-3 ">
+      <div className="flex space-x-3 items-center ">
         <ThemeSwitcher className="text-green-600" />
 
         <DropdownMenu>
@@ -37,7 +37,7 @@ export default function Nav() {
             >
               <Bell className="text-green-600" />
               <span className="sr-only">Notifications</span>
-              <div className="absolute inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-red-500 rounded-full -top-2 end-6 dark:border-gray-900">
+              <div className="absolute inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-red-500 rounded-full -top-1 end-6 dark:border-gray-900">
                 20
               </div>
             </div>
