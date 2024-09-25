@@ -1,5 +1,6 @@
 import Heading from "@/app/components/backend/Heading";
 import PageHeader from "@/app/components/backend/PageHeader";
+import TableAction from "@/app/components/backend/TableAction";
 import { Download, Plus, Search, Trash2 } from "lucide-react";
 import Link from "next/link";
 
@@ -9,8 +10,8 @@ export default function page({ title, heading, linkTitle, href }) {
       {/* Header */}
       <PageHeader
         heading="Categories"
-        linkTitle="Add Categoryyy"
-        href="/dashboard/categories/new"
+        linkTitle="Add Category"
+        href="/dashboard/catogeries/new"
       />
       {/* Export || Search || Bulk Delete */}
       <div className="flex py-4 bg-slate-700 rounded-lg justify-between items-center px-6">
@@ -37,7 +38,8 @@ export default function page({ title, heading, linkTitle, href }) {
         </button>
       </div>
 
-      <Heading title="Categories" />
+      {/* Table */}
+      <TableAction />
     </div>
   );
 }
